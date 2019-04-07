@@ -16,10 +16,13 @@ document.querySelectorAll("#charter .card h3 img").forEach(toggleArrow => {
   toggleArrow.addEventListener("click", event => {
     let card = event.path[2];
     let cardContent = card.children[1];
-    let height = cardContent.style.maxHeight;
-    if (height === "") cardContent.style.maxHeight = "500px";
+    let height = cardContent.style.height;
+    // if (height === "") cardContent.style.maxHeight = "500px";
+    if (height === "") cardContent.style.height = "500px";
     else {
-      cardContent.style.maxHeight = "";
+      cardContent.style.height = "";
+
+      // cardContent.style.maxHeight = "";
     }
   });
 });
@@ -33,7 +36,7 @@ document
     thisFeature.style.width = 0;
     // thisFeature.style.height = 0;
 
-    // thisFeature.style.maxHeight = 0;
+    thisFeature.style.maxHeight = 0;
 
     // let featureSlider = event.path[2];
     // let nextFeature = featureSlider.children[featureIndex];
@@ -41,8 +44,6 @@ document
     // console.dir(nextFeature.style.width);
     // nextFeature.style.width = "100%";
     // nextFeature.style.height = "100%";
-
-    console.dir(nextFeature.style.width);
 
     // let nextFeature =
   });
