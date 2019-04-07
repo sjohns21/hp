@@ -11,7 +11,7 @@ document.addEventListener("click", event => {
     navContent.style.display = "";
 });
 
-// slide toggle
+// card slide toggle
 document.querySelectorAll("#charter .card h3").forEach(heading => {
   heading.addEventListener("click", event => {
     let card = event.path[2];
@@ -24,7 +24,7 @@ document.querySelectorAll("#charter .card h3").forEach(heading => {
   });
 });
 
-//carousel
+///////// carousel
 // let featureIndex = 1;
 // document
 //   .querySelector("#charter .feature button")
@@ -33,16 +33,41 @@ document.querySelectorAll("#charter .card h3").forEach(heading => {
 //     thisFeature.style.width = 0;
 //   });
 
-let featureSlider = document.querySelector("#feature-slider");
-let lastScrollId;
-featureSlider.onscroll = function() {
-  clearTimeout(lastScrollId);
-  lastScrollId = setTimeout(gravitate, 300);
+///////// horizontal feature slider
+// let featureSlider = document.querySelector("#feature-slider");
+// let lastScrollId;
+// featureSlider.onscroll = function() {
+//   clearTimeout(lastScrollId);
+//   lastScrollId = setTimeout(gravitate, 300);
+// };
+
+// function gravitate() {
+//   let featureWidth = window.innerWidth;
+//   let scrollPosition = featureSlider.scrollLeft;
+//   featureSlider.scrollLeft =
+//     Math.round(scrollPosition / featureWidth) * featureWidth;
+// }
+
+//vertical feature slider
+// let featureSlider = document.querySelector("#feature-slider");
+// let featureSliderIndex = 0;
+
+// featureSlider.children[featureSliderIndex].style.width = "100%";
+
+// fade ins
+document.querySelector("#feature-container");
+// let i = 0;
+let features = document.querySelector("#feature-container").children;
+
+window.onscroll = function() {
+  // console.log(window.scrollY);
+  [].forEach.call(features, function(feature, i) {
+    if (feature.getBoundingClientRect().y < window.innerHeight * 0.8) {
+      feature.style.opacity = 1;
+    }
+  });
 };
 
-function gravitate() {
-  let featureWidth = window.innerWidth;
-  let scrollPosition = featureSlider.scrollLeft;
-  featureSlider.scrollLeft =
-    Math.round(scrollPosition / featureWidth) * featureWidth;
-}
+window.setTimeout(function() {
+  features[0].style.opacity = 1;
+}, 500);
