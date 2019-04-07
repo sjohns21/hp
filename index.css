@@ -57,12 +57,22 @@ body {
 #charter img {
   width: 100%;
 }
-#charter p {
+/* #charter p {
   display: none;
-}
+} */
 #charter h3 img {
   /* height: 20px; */
   width: auto;
+}
+.card-content {
+  display: none;
+  overflow: hidden;
+  -webkit-transition: max-height 1s;
+  -moz-transition: max-height 1s;
+  -ms-transition: max-height 1s;
+  -o-transition: max-height 1s;
+  transition: max-height 1s;
+  max-height: 0px;
 }
 /* #nav {
 
