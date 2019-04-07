@@ -12,7 +12,7 @@ document.addEventListener("click", event => {
 });
 
 // slide toggle
-document.querySelectorAll("#charter h3 img").forEach(toggleArrow => {
+document.querySelectorAll("#charter .card h3 img").forEach(toggleArrow => {
   toggleArrow.addEventListener("click", event => {
     let card = event.path[2];
     let cardContent = card.children[1];
@@ -23,3 +23,26 @@ document.querySelectorAll("#charter h3 img").forEach(toggleArrow => {
     }
   });
 });
+
+//carousel
+let featureIndex = 1;
+document
+  .querySelector("#charter .feature button")
+  .addEventListener("click", event => {
+    let thisFeature = event.path[1];
+    thisFeature.style.width = 0;
+    // thisFeature.style.height = 0;
+
+    // thisFeature.style.maxHeight = 0;
+
+    // let featureSlider = event.path[2];
+    // let nextFeature = featureSlider.children[featureIndex];
+
+    // console.dir(nextFeature.style.width);
+    // nextFeature.style.width = "100%";
+    // nextFeature.style.height = "100%";
+
+    console.dir(nextFeature.style.width);
+
+    // let nextFeature =
+  });
