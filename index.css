@@ -67,21 +67,33 @@ body {
 }
 
 .card-content img {
-  max-width: 100%;
+  max-width: 100vw;
 }
 
+#feature-slider {
+  white-space: nowrap;
+  overflow: auto;
+  scroll-behavior: smooth;
+  font-size: 0;
+  display: flex;
+}
+
+.feature {
+  font-size: 1rem;
+  display: inline-block;
+  /* overflow: hidden;
+  transition: width 3s; */
+}
 .feature-title {
   text-align: center;
 }
 .feature img {
-  max-width: 100%;
+  max-width: 100vw;
 }
-.feature {
-  display: inline-block;
-  overflow: hidden;
-  transition: width 3s;
+#feature-slider p {
+  white-space: normal;
 }
-.feature:first-of-type {
+/* .feature:first-of-type {
   width: 100%;
   height: 400px;
-}
+} */

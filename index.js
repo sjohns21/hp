@@ -12,12 +12,12 @@ document.addEventListener("click", event => {
 });
 
 // slide toggle
-document.querySelectorAll("#charter .card h3 img").forEach(toggleArrow => {
-  toggleArrow.addEventListener("click", event => {
+document.querySelectorAll("#charter .card h3").forEach(heading => {
+  heading.addEventListener("click", event => {
     let card = event.path[2];
     let cardContent = card.children[1];
-    let height = cardContent.style.maxHeight;
-    if (height === "") cardContent.style.maxHeight = "500px";
+    let maxHeight = cardContent.style.maxHeight;
+    if (maxHeight === "") cardContent.style.maxHeight = "500px";
     else {
       cardContent.style.maxHeight = "";
     }
@@ -25,24 +25,24 @@ document.querySelectorAll("#charter .card h3 img").forEach(toggleArrow => {
 });
 
 //carousel
-let featureIndex = 1;
-document
-  .querySelector("#charter .feature button")
-  .addEventListener("click", event => {
-    let thisFeature = event.path[1];
-    thisFeature.style.width = 0;
-    // thisFeature.style.height = 0;
+// let featureIndex = 1;
+// document
+//   .querySelector("#charter .feature button")
+//   .addEventListener("click", event => {
+//     let thisFeature = event.path[1];
+//     thisFeature.style.width = 0;
+//   });
 
-    // thisFeature.style.height = 0;
+let featureSlider = document.querySelector("#feature-slider");
+let lastScrollId;
+featureSlider.onscroll = function() {
+  clearTimeout(lastScrollId);
+  lastScrollId = setTimeout(gravitate, 300);
+};
 
-    // thisFeature.style.maxHeight = 0;
-
-    // let featureSlider = event.path[2];
-    // let nextFeature = featureSlider.children[featureIndex];
-
-    // console.dir(nextFeature.style.width);
-    // nextFeature.style.width = "100%";
-    // nextFeature.style.height = "100%";
-
-    // let nextFeature =
-  });
+function gravitate() {
+  let featureWidth = window.innerWidth;
+  let scrollPosition = featureSlider.scrollLeft;
+  featureSlider.scrollLeft =
+    Math.round(scrollPosition / featureWidth) * featureWidth;
+}
