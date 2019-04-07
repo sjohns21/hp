@@ -1,3 +1,4 @@
+// nav bar
 document.querySelector("#nav-button").addEventListener("click", event => {
   let navContent = document.querySelector("#nav-content");
   if (navContent.style.display === "") navContent.style.display = "block";
@@ -9,15 +10,16 @@ document.addEventListener("click", event => {
   if (navContent.style.display === "block" && !event.path.includes(navContent))
     navContent.style.display = "";
 });
+
+// slide toggle
 document.querySelectorAll("#charter h3 img").forEach(toggleArrow => {
   toggleArrow.addEventListener("click", event => {
     let card = event.path[2];
     let cardContent = card.children[1];
     let height = cardContent.style.maxHeight;
-    if (height === "") cardContent.style.maxHeight = "100px";
+    if (height === "") cardContent.style.maxHeight = "500px";
     else {
       cardContent.style.maxHeight = "";
     }
   });
 });
-setTimeout(() => (document.querySelector(".test").style.maxHeight = "100px"));

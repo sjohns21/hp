@@ -57,11 +57,8 @@ body {
 #charter img {
   width: 100%;
 }
-/* #charter p {
-  display: none;
-} */
+
 #charter h3 img {
-  /* height: 20px; */
   width: auto;
 }
 .card-content {
@@ -72,20 +69,9 @@ body {
   -o-transition: max-height 1s; */
   transition: max-height 1s;
   max-height: 0px;
+  background-image: linear-gradient(white, gray);
 }
-/* #nav {
 
-  display: flex;
-  flex-wrap: wrap;
-
-  align-items: center;
-  justify-content: flex-end;
+.card-content img {
+  max-width: 50%;
 }
-#nav a {
-  text-decoration: none;
-  color: var(--gray);
-  border: 1px solid var(--gray);
-  border-radius: 10px;
-  padding: 5px;
-  margin: 1px;
-} */
