@@ -59,12 +59,15 @@ body {
   text-decoration: none;
   color: var(--gray);
 }
-#charter {
+/* #charter {
   position: relative;
   display: flex;
   flex-direction: column;
+} */
+#body {
+  margin: 5%;
 }
-#welcome-image {
+.welcome-image {
   width: 100%;
 }
 #welcome-image-caption {
