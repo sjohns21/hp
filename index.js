@@ -55,9 +55,8 @@ document.querySelectorAll("#charter .card h3").forEach(heading => {
 // featureSlider.children[featureSliderIndex].style.width = "100%";
 
 // fade ins
-document.querySelector("#feature-container");
-// let i = 0;
-let features = document.querySelector("#feature-container").children;
+// let features = document.querySelector("#feature-container").children;
+let features = document.querySelectorAll(".feature");
 
 window.onscroll = function() {
   // console.log(window.scrollY);
