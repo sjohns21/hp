@@ -58,7 +58,6 @@ document.querySelectorAll(".card h3").forEach(heading => {
 // let features = document.querySelector("#feature-container").children;
 let features = document.querySelectorAll(".feature");
 
-window.onscroll = fadeIn;
 // v1
 
 // v2
@@ -73,7 +72,7 @@ window.onscroll = fadeIn;
 
 function fadeIn() {
   [].forEach.call(features, function(feature, i) {
-    if (feature.getBoundingClientRect().y < window.innerHeight * 0.8) {
+    if (feature.getBoundingClientRect().y < window.innerHeight * 0.9) {
       feature.style.opacity = 1;
     }
     if (feature.getBoundingClientRect().bottom < window.innerHeight) {
@@ -81,6 +80,7 @@ function fadeIn() {
     }
   });
 }
+window.onscroll = fadeIn;
 
 // window.setTimeout(function() {
 //   features[0].style.opacity = 1;
