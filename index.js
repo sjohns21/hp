@@ -12,7 +12,7 @@ document.addEventListener("click", event => {
 });
 
 // card slide toggle
-document.querySelectorAll("#charter .card h3").forEach(heading => {
+document.querySelectorAll(".card h3").forEach(heading => {
   heading.addEventListener("click", event => {
     let card = event.path[2];
     let cardContent = card.children[1];
@@ -58,8 +58,20 @@ document.querySelectorAll("#charter .card h3").forEach(heading => {
 // let features = document.querySelector("#feature-container").children;
 let features = document.querySelectorAll(".feature");
 
-window.onscroll = function() {
-  // console.log(window.scrollY);
+window.onscroll = fadeIn;
+// v1
+
+// v2
+// [].forEach.call(features, function(feature, i) {
+//   if (feature.getBoundingClientRect().y < window.innerHeight * 0.8) {
+//     feature.style.opacity = 1;
+//   }
+//   if (feature.getBoundingClientRect().bottom < window.innerHeight) {
+//     feature.style.opacity = 1;
+//   }
+// });
+
+function fadeIn() {
   [].forEach.call(features, function(feature, i) {
     if (feature.getBoundingClientRect().y < window.innerHeight * 0.8) {
       feature.style.opacity = 1;
@@ -68,8 +80,9 @@ window.onscroll = function() {
       feature.style.opacity = 1;
     }
   });
-};
+}
 
-window.setTimeout(function() {
-  features[0].style.opacity = 1;
-}, 500);
+// window.setTimeout(function() {
+//   features[0].style.opacity = 1;
+// }, 500);
+window.setTimeout(fadeIn, 500);
