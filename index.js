@@ -12,7 +12,7 @@ document.addEventListener("click", event => {
 });
 
 // card slide toggle
-document.querySelectorAll(".card h3").forEach(heading => {
+document.querySelectorAll(".card .feature-title").forEach(heading => {
   heading.addEventListener("click", event => {
     let card = event.path[2];
     let cardContent = card.children[1];

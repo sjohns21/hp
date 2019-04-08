@@ -12,7 +12,7 @@ html {
   /* height: 100%; */
 }
 body {
-  margin: 5%;
+  /* margin: 5%; */
   text-align: center;
 }
 #header {
@@ -40,6 +40,7 @@ body {
 #nav-button {
   border: 1px solid var(--gray);
   border-radius: 10px;
+  padding: 0.5rem;
 }
 
 #nav-button img {
@@ -69,6 +70,8 @@ body {
 } */
 #body {
   position: relative;
+  margin: 5%;
+
   /* margin: 5%; */
   /* text-align: center; */
 }
