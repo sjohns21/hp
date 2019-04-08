@@ -64,6 +64,9 @@ window.onscroll = function() {
     if (feature.getBoundingClientRect().y < window.innerHeight * 0.8) {
       feature.style.opacity = 1;
     }
+    if (feature.getBoundingClientRect().bottom < window.innerHeight) {
+      feature.style.opacity = 1;
+    }
   });
 };
 
