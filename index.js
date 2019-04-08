@@ -12,7 +12,7 @@ document.addEventListener("click", event => {
 });
 
 // card slide toggle
-document.querySelectorAll(".card .feature-title").forEach(heading => {
+document.querySelectorAll(".slide .feature-title").forEach(heading => {
   heading.addEventListener("click", event => {
     let card = event.path[2];
     let cardContent = card.children[1];
@@ -71,7 +71,7 @@ let features = document.querySelectorAll(".feature");
 // });
 
 function fadeIn() {
-  [].forEach.call(features, function(feature, i) {
+  [].forEach.call(features, function (feature, i) {
     if (feature.getBoundingClientRect().y < window.innerHeight * 0.9) {
       feature.style.opacity = 1;
     }

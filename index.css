@@ -11,10 +11,12 @@ html {
   color: var(--gray);
   /* height: 100%; */
 }
+
 body {
   /* margin: 5%; */
   text-align: center;
 }
+
 #header {
   display: flex;
   justify-content: space-between;
@@ -33,10 +35,12 @@ body {
   width: auto;
   height: auto;
 }
+
 #nav {
   font-size: 2rem;
   position: relative;
 }
+
 #nav-button {
   border: 1px solid var(--gray);
   border-radius: 10px;
@@ -46,9 +50,11 @@ body {
 #nav-button img {
   height: 20px;
 }
+
 #nav-button:hover {
   cursor: pointer;
 }
+
 #nav-content {
   display: none;
   position: absolute;
@@ -58,11 +64,13 @@ body {
   width: 100%;
   top: 0;
 }
+
 #nav-content a {
   display: block;
   text-decoration: none;
   color: var(--gray);
 }
+
 /* #charter {
   position: relative;
   display: flex;
@@ -75,12 +83,15 @@ body {
   /* margin: 5%; */
   /* text-align: center; */
 }
+
 body img {
   border-radius: 1rem;
 }
+
 .welcome-image {
   width: 100%;
 }
+
 .welcome-image-caption {
   position: absolute;
   top: 10px;
@@ -96,9 +107,11 @@ body img {
   font-size: 1.5rem;
   text-align: center;
 }
-#welcome-image-caption > strong {
+
+#welcome-image-caption>strong {
   font-size: 2rem;
 }
+
 .card-content {
   overflow: hidden;
   transition: max-height 1s;
@@ -138,14 +151,17 @@ body img {
   border-radius: 1rem;
   padding: 1rem;
 }
+
 .feature-title {
   font-size: 2rem;
   padding-bottom: 1rem;
 }
+
 .feature-subtitle {
   font-size: 1.5rem;
 }
-.feature img {
+
+.feature>img {
   width: 100%;
   display: block;
   margin-bottom: 1rem;
