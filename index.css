@@ -76,13 +76,10 @@ body {
   display: flex;
   flex-direction: column;
 } */
-#body {
-  position: relative;
-  margin: 5%;
 
-  /* margin: 5%; */
-  /* text-align: center; */
-}
+/* margin: 5%; */
+/* text-align: center; */
+
 
 body img {
   border-radius: 1rem;
